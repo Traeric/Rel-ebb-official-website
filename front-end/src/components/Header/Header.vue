@@ -28,11 +28,21 @@
         <div class="nick">Eric Jin</div>
         <!-- 下拉列表 -->
         <ul class="pull-list">
+          <div class="position">
             <div class="trangle"></div>
-            <li><i class="el-icon-location-outline"></i> 个人信息</li>
-            <li><i class="el-icon-setting"></i> 系统设置</li>
-            <li class="dilivery"></li>
-            <li><i class="el-icon-close"></i> 退出登录</li>
+            <div class="wrapper">
+              <li>
+                <i class="el-icon-location-outline"></i> 个人信息
+              </li>
+              <li>
+                <i class="el-icon-setting"></i> 系统设置
+              </li>
+              <li class="dilivery"></li>
+              <li>
+                <i class="el-icon-close"></i> 退出登录
+              </li>
+            </div>
+          </div>
         </ul>
       </div>
     </div>
@@ -73,10 +83,10 @@ export default {
   height 60px
   background-color #fff
   border-bottom 1px solid #f9f9f9
+  padding 0 20px
   .right
     width 150px
     height 100%
-    background-color #f90
     .logo
       width 100%
       height 100%
@@ -133,6 +143,11 @@ export default {
       flex-direction column
       cursor pointer
       position relative
+      &:hover
+        .pull-list
+          visibility visible
+          top 70px
+          opacity 1
       .avatar
         height 40px
         width 40px
@@ -147,22 +162,41 @@ export default {
         text-align center
         line-height 20px
       .pull-list
+        transition all 0.5s cubic-bezier(0.06, 0.24, 1, 2.2)
+        visibility hidden
+        opacity 0
         position absolute
-        top 60px
-        left -60px
-        min-width 120px
-        border 1px solid #dedede
+        top 0
+        left -75px
+        min-width 110px
         border-radius 4px
-        .trangle
+        background-color #fff
+        box-shadow 2px 2px 22px #dedede
+        .position
+          position relative
+          .trangle
+            position absolute
+            top -16px
+            left 85px
             width 0
             height 0
-            
-        li
-            padding 5px 2px
-            &.dilivery
+            border-width 8px
+            border-style solid
+            border-color transparent transparent #fff transparent
+          .wrapper
+            border-radius 4px
+            overflow hidden
+            li
+              padding 8px 0 8px 10px
+              font-size 14px
+              &:hover
+                background-color rgba(255, 175, 201, 0.3)
+              &.dilivery
                 padding 0
                 height 1px
                 width 100%
                 box-shadow 0 0 6px #dedede
                 background-color #dedede
+              &:hover
+                color #ffafc9
 </style>
