@@ -2,7 +2,7 @@
   <div id="download">
     <div class="download-title">Rel-ebb下载</div>
     <div class="download-area">
-      <div class="npm con">
+      <div class="npm con" @click="npmDownload">
         <div class="icon">
           <div class="img">
             <img src="@/assets/images/npm.png" alt="NO IMG" />
@@ -10,9 +10,7 @@
         </div>
         <div class="info">
           <div class="title">npm下载</div>
-          <div class="desc">
-            使用npm下载rel-ebb进行使用
-          </div>
+          <div class="desc">使用npm下载rel-ebb进行使用</div>
         </div>
       </div>
       <div class="github con">
@@ -54,7 +52,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    npmDownload() {
+      const h = this.$createElement;
+      this.$msgbox({
+        title: "消息",
+        message: h("p", null, [
+          h("span", null, "内容可以是 "),
+          h("i", { style: "color: teal" }, "VNode")
+        ]),
+        showCancelButton: true,
+        cancelButtonText: "关闭"
+      });
+    }
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
