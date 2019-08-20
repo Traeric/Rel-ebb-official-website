@@ -1,9 +1,11 @@
 <template>
   <div id="wrap">
     <div class="right">
-      <div class="logo">
-        <img src="@/assets/logo.png" alt="NO IMG" />
-      </div>
+      <router-link to="/">
+        <div class="logo">
+          <img src="@/assets/logo.png" alt="NO IMG" />
+        </div>
+      </router-link>
     </div>
     <div class="left">
       <div class="search">
@@ -16,10 +18,18 @@
       </div>
       <div class="nav">
         <ul class="nav-list">
-          <li>教程</li>
-          <li>下载</li>
-          <li>聊天室</li>
-          <li>论坛</li>
+          <li>
+            <router-link to="/ddd" active-class="active">教程</router-link>
+          </li>
+          <li>
+            <router-link to="/download" active-class="active">下载</router-link>
+          </li>
+          <li>
+            <router-link to="/fff" active-class="active">聊天室</router-link>
+          </li>
+          <li>
+            <router-link to="/hhh" active-class="active">论坛</router-link>
+          </li>
         </ul>
       </div>
       <div class="user">
@@ -132,13 +142,16 @@ export default {
         align-items center
         li
           margin 0 15px
-          padding 5px
-          cursor pointer
-          border-bottom 3px solid transparent
-          &.active
-            border-bottom 3px solid #ffafc9
-          &:hover
-            border-bottom 3px solid #ffafc9
+          a
+            padding 5px
+            cursor pointer
+            border-bottom 3px solid transparent
+            text-decoration none
+            color #000
+            &.active
+              border-bottom 3px solid #ffafc9
+            &:hover
+              border-bottom 3px solid #ffafc9
     .user
       display flex
       flex-direction column

@@ -1,23 +1,22 @@
 <template>
   <div id="app">
     <Header />
-    <HomePage />
-    <Footer />
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
 import "@/../static/css/reset.css";
 import Header from "./components/Header/Header";
-import HomePage from "./components/HomePage/HomePage";
-import Footer from "./components/Footer/Footer";
+import router from "./router/route.js";
 
 export default {
   name: "app",
+  router,
   components: {
-    Header,
-    HomePage,
-    Footer,
+    Header
   }
 };
 </script>
