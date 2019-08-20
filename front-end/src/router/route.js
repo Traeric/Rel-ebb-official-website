@@ -14,6 +14,7 @@ export default new Router({
         {
             path: "/download",
             component: Download,
+            name: "download",
         },
     ],
 });

@@ -33,7 +33,7 @@
               <div class="title">下载</div>
               <div class="desc">这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述</div>
             </div>
-            <div class="bottom">
+            <div class="bottom" @click="download">
               <i class="el-icon-info"></i> 了解详情
             </div>
           </div>
@@ -79,7 +79,7 @@
             <a href="#">快速开始</a>
           </div>
           <div class="link">
-            <a href="#">下载中心</a>
+            <router-link to="/download">下载中心</router-link>
           </div>
           <div class="link">
             <a href="#">聊天室</a>
@@ -100,7 +100,12 @@
 export default {
   data() {
     return {};
-  }
+  },
+  methods: {
+    download() {
+      this.$router.push("/download");
+    },
+  },
 };
 </script>
 
