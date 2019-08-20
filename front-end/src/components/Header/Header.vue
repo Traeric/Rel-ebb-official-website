@@ -19,6 +19,7 @@
           <li>教程</li>
           <li>下载</li>
           <li>聊天室</li>
+          <li>论坛</li>
         </ul>
       </div>
       <div class="user">
