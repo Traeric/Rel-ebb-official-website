@@ -186,6 +186,10 @@ export default {
   display flex
   justify-content space-between
   padding 30px 0 30px 130px
+  position fixed
+  bottom 0
+  left 0
+  width 100%
   .left
     display flex
     .con
