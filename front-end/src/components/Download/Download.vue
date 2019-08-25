@@ -56,7 +56,6 @@
     export default {
         methods: {
             npmDownload() {
-                const h = this.$createElement;
                 this.$alert(`
                     <div>npm下载：npm i rel-ebb</div>
                     <div>npm搜索地址：
