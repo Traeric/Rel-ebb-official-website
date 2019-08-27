@@ -211,8 +211,6 @@ export default {
         .img
           width 100px
           height 100px
-          border 5px solid #f7fbfd
-          border-radius 50%
           img
             width 100%
             height 100%

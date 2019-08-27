@@ -9,6 +9,7 @@
 
 <script>
 import "@/../static/css/reset.css";
+import "@/../static/font-awesome-4.7.0/css/font-awesome.min.css"
 import Header from "./components/Header/Header";
 import router from "./router/route.js";
 
