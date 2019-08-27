@@ -25,7 +25,7 @@
             <router-link to="/download" active-class="active">下载</router-link>
           </li>
           <li>
-            <router-link to="/fff" active-class="active">聊天室</router-link>
+            <router-link to="/chat_room" active-class="active">聊天室</router-link>
           </li>
           <li>
             <router-link to="/hhh" active-class="active">论坛</router-link>
