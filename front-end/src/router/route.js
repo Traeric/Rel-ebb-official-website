@@ -3,6 +3,7 @@ import Router from "vue-router";
 import HomePage from "../components/HomePage/HomePage";
 import Download from "../components/Download/Download";
 import ChatRoom from "../components/ChatRoom/ChatRoom";
+import Forum from "../components/Forum/Forum";
 
 vue.use(Router);
 
@@ -21,6 +22,11 @@ export default new Router({
             path: "/chat_room",
             component: ChatRoom,
             name: "chat_room",
+        },
+        {
+            path: "/forum",
+            component: Forum,
+            name: "forum",
         },
     ],
 });

@@ -28,7 +28,7 @@
             <router-link to="/chat_room" active-class="active">聊天室</router-link>
           </li>
           <li>
-            <router-link to="/hhh" active-class="active">论坛</router-link>
+            <router-link to="/forum" active-class="active">论坛</router-link>
           </li>
           <li>
             <router-link to="/aaa" active-class="active">博客</router-link>
