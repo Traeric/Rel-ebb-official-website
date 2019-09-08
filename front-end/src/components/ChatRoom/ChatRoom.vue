@@ -1,22 +1,5 @@
 <template>
     <div id="chat_room">
-        <div class="top">
-            <div class="broadcast">
-                <div class="icon">
-                    公告
-                    <i class="fa fa-bullhorn"></i>
-                </div>
-                <div class="text">
-                    <div class="wrap" ref="broadcastWrap">
-                        <p>是个好烦的借口刚好地方个地方了事故好几个地方和管理上回家赶紧来回复登录时公开</p>
-                        <p>的风景更好的身高还是地方咯刚回家了地方机构或类似的</p>
-                        <p>地方和骄傲搜狐发个啥回购放大后工单</p>
-                        <p>数据公安是古老和法律</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="centerit">
             <div class="chat-container">
                 <aside>
@@ -326,38 +309,6 @@
         width 100%
         background-image url("../../assets/images/chat/bg.jpg")
 
-        .top
-            height 36px
-            background-color rgba(255, 175, 201, 0.3)
-
-            .broadcast
-                display flex
-                justify-content start
-                align-items center
-                width 60%
-                height 100%
-                margin 0 auto
-
-                .icon
-                    font-size 16px
-                    height 100%
-                    line-height 36px
-                    color #1ba784
-                    margin-right 10px
-
-                .text
-                    height 100%
-                    overflow hidden
-
-                    .wrap
-                        transition all 0.5s linear
-
-                        p
-                            height 100%
-                            line-height 36px
-                            animation wordsLoop 10s linear infinite normal
-                            color #57c3c2
-
         .centerit
             padding 20px 0
 
@@ -370,11 +321,5 @@
                 .msg-input
                     outline none
                     resize none
-
-    @keyframes wordsLoop
-        0%
-            transform translateX(100px)
-        100%
-            transform translateX(-100%)
 </style>
 

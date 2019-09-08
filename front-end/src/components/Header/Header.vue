@@ -96,8 +96,9 @@ export default {
   align-items center
   height 60px
   background-color #fff
-  border-bottom 1px solid #f9f9f9
+  border-bottom 1px solid #dfdfdf
   padding 0 20px
+  box-shadow 2px 0 6px #dedede
   .right
     width 150px
     height 100%
