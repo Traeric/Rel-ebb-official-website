@@ -1,588 +1,380 @@
 <template>
-  <div id="chat_room">
-    <div class="top">
-      <div class="broadcast">
-        <div class="icon">
-          公告
-          <i class="fa fa-bullhorn"></i>
+    <div id="chat_room">
+        <div class="top">
+            <div class="broadcast">
+                <div class="icon">
+                    公告
+                    <i class="fa fa-bullhorn"></i>
+                </div>
+                <div class="text">
+                    <div class="wrap" ref="broadcastWrap">
+                        <p>是个好烦的借口刚好地方个地方了事故好几个地方和管理上回家赶紧来回复登录时公开</p>
+                        <p>的风景更好的身高还是地方咯刚回家了地方机构或类似的</p>
+                        <p>地方和骄傲搜狐发个啥回购放大后工单</p>
+                        <p>数据公安是古老和法律</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="text">
-          <div class="wrap" ref="broadcastWrap">
-            <p>是个好烦的借口刚好地方个地方了事故好几个地方和管理上回家赶紧来回复登录时公开</p>
-            <p>的风景更好的身高还是地方咯刚回家了地方机构或类似的</p>
-            <p>地方和骄傲搜狐发个啥回购放大后工单</p>
-            <p>数据公安是古老和法律</p>
-          </div>
+
+        <div class="centerit">
+            <div class="chat-container">
+                <aside>
+                    <div class="top-bar">
+                        <div class="menu-burger-container">
+                            <div class="menu-burger"></div>
+                        </div>
+                        <div class="new-conversation">新建聊天室</div>
+                    </div>
+                    <div class="conversations">
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head online">
+                                    <img src="@/assets/images/chat/1.png"/>
+                                </div>
+                                <div class="user-name">张三</div>
+                                <div class="last-message">是的，演讲安排在明天，你能做吗？</div>
+                            </div>
+                            <div class="last new">12:32</div>
+                        </div>
+                        <div class="thread active">
+                            <div class="details">
+                                <div class="user-head away">
+                                    <img src="@/assets/images/chat/2.png"/>
+                                </div>
+                                <div class="user-name">李四</div>
+                                <div class="last-message">你：太棒了，谢谢。我期待着早上见到你。</div>
+                            </div>
+                            <div class="last">12:32</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                        <div class="thread">
+                            <div class="details">
+                                <div class="user-head offline">
+                                    <img src="@/assets/images/chat/3.png"/>
+                                </div>
+                                <div class="user-name">小敏</div>
+                                <div class="last-message">知道了！感谢您发送！</div>
+                            </div>
+                            <div class="last">16:47</div>
+                        </div>
+                    </div>
+                </aside>
+                <main>
+                    <div class="top-bar">
+                        <div class="user-info">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/1.png"/>
+                            </div>
+                            <div class="name">小强</div>
+                            <div class="status online"></div>
+                        </div>
+                    </div>
+                    <div class="messages" id="messages">
+                        <div class="date-split">以前或更早以前</div>
+                        <div class="message">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/2.png"/>
+                            </div>
+                            <div class="content">我已经更新了网站内容，菲奥娜，希望一切都好吗？请告诉我还有什么变化</div>
+                        </div>
+                        <div class="message fromme">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/1.png"/>
+                            </div>
+                            <div class="content">啊！太好了。我现在得走了，明天我会赶上你的。</div>
+                        </div>
+                        <div class="message">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/2.png"/>
+                            </div>
+                            <div class="content">不用担心，我很高兴你快乐！</div>
+                        </div>
+                        <div class="message">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/2.png"/>
+                            </div>
+                            <div class="content">当然，等会儿再跟你说。</div>
+                        </div>
+                        <div class="date-split">今日</div>
+                        <div class="message fromme">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/1.png"/>
+                            </div>
+                            <div class="content">你能帮我检查一下照片吗？</div>
+                        </div>
+                        <div class="message">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/2.png"/>
+                            </div>
+                            <div class="content">我已经做了，我现在就把演示稿整理好。</div>
+                        </div>
+                        <div class="message fromme">
+                            <div class="user-head">
+                                <img src="@/assets/images/chat/1.png"/>
+                            </div>
+                            <div class="content">太棒了，谢谢。我期待着早上见到你。</div>
+                        </div>
+                    </div>
+                    <div class="bottom-bar">
+                        <textarea class="msg-input" placeholder="发送信息"></textarea>
+                        <div class="send-button">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 x="0px" y="0px" viewBox="0 0 512.076 512.076"
+                                 style="enable-background:new 0 0 512.076 512.076;" xml:space="preserve">
+                                <g>
+                                  <path d="M509.532,34.999c-2.292-2.233-5.678-2.924-8.658-1.764L5.213,225.734c-2.946,1.144-4.967,3.883-5.192,7.034
+                                       c-0.225,3.151,1.386,6.149,4.138,7.7l102.719,57.875l35.651,174.259c0.222,1.232,0.723,2.379,1.442,3.364
+                                       c0.072,0.099,0.131,0.175,0.191,0.251c1.256,1.571,3.037,2.668,5.113,3c0.265,0.042,0.531,0.072,0.795,0.088
+                                       c0.171,0.011,0.341,0.016,0.511,0.016c1.559,0,3.036-0.445,4.295-1.228c0.426-0.264,0.831-0.569,1.207-0.915
+                                       c0.117-0.108,0.219-0.205,0.318-0.306l77.323-77.52c3.186-3.195,3.18-8.369-0.015-11.555c-3.198-3.188-8.368-3.18-11.555,0.015
+                                       l-60.739,60.894l13.124-112.394l185.495,101.814c1.868,1.02,3.944,1.239,5.846,0.78c0.209-0.051,0.4-0.105,0.589-0.166
+                                       c1.878-0.609,3.526-1.877,4.574-3.697c0.053-0.094,0.1-0.179,0.146-0.264c0.212-0.404,0.382-0.8,0.517-1.202L511.521,43.608
+                                       C512.6,40.596,511.824,37.23,509.532,34.999z M27.232,234.712L432.364,77.371l-318.521,206.14L27.232,234.712z M162.72,316.936
+                                       c-0.764,0.613-1.429,1.374-1.949,2.267c-0.068,0.117-0.132,0.235-0.194,0.354c-0.496,0.959-0.784,1.972-0.879,2.986L148.365,419.6
+                                       l-25.107-122.718l275.105-178.042L162.72,316.936z M359.507,419.195l-177.284-97.307L485.928,66.574L359.507,419.195z"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </main>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="left">
-      <div class="title">聊天室列表</div>
-      <div class="rooms">
-        <div class="item">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="right">
-            <div class="time">
-              <span class="time-mark">创建时间：</span>
-              <span class="create-time">2019年10月22日</span>
-            </div>
-            <div class="name">Rel-ebb官方讨论群</div>
-          </div>
-          <div class="num"><el-tag type="danger">333</el-tag></div>
-        </div>
-        <div class="item">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="right">
-            <div class="time">
-              <span class="time-mark">创建时间：</span>
-              <span class="create-time">2019年10月22日</span>
-            </div>
-            <div class="name">Rel-ebb官方讨论群</div>
-          </div>
-          <div class="num"><el-tag type="danger">333</el-tag></div>
-        </div>
-        <div class="item">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="right">
-            <div class="time">
-              <span class="time-mark">创建时间：</span>
-              <span class="create-time">2019年10月22日</span>
-            </div>
-            <div class="name">Rel-ebb官方讨论群</div>
-          </div>
-          <div class="num"><el-tag type="danger">333</el-tag></div>
-        </div>
-        <div class="item">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="right">
-            <div class="time">
-              <span class="time-mark">创建时间：</span>
-              <span class="create-time">2019年10月22日</span>
-            </div>
-            <div class="name">Rel-ebb官方讨论群</div>
-          </div>
-          <div class="num"><el-tag type="danger">333</el-tag></div>
-        </div>
-        <div class="item">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="right">
-            <div class="time">
-              <span class="time-mark">创建时间：</span>
-              <span class="create-time">2019年10月22日</span>
-            </div>
-            <div class="name">Rel-ebb官方讨论群</div>
-          </div>
-          <div class="num"><el-tag type="danger">333</el-tag></div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="chat-title">Rel-ebb官方讨论群</div>
-      <div class="chat-content">
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-right">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div
-              class="msg-content"
-            >大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶大部分高速接口不噶</div>
-          </div>
-        </div>
-        <div class="msg-item msg-left">
-          <div class="avatar">
-            <img src="@/assets/images/CDN.png" alt="NO IMG" />
-          </div>
-          <div class="msg">
-            <div class="msg-content">大部分高速接口不噶</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <div class="box-card">
-        <div class="title">
-          <span>成员列表</span>
-        </div>
-        <div class="card-content">
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-          <div class="item">
-            <div class="avatar">
-              <img src="@/assets/images/CDN.png" alt="NO IMG" />
-            </div>
-            <div class="name">小娇娇</div>
-            <div class="mark">
-              <el-tag type="success">室长</el-tag>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer">footer</div>
-  </div>
 </template>
 
 
 <script>
-export default {
-  mounted() {
-    let wrapDom = this.$refs.broadcastWrap;
-    // 获取wrap的高度
-    let height = wrapDom.clientHeight;
-    // 获取公告的数量
-    let count = wrapDom.children.length;
-    let index = 1;
-    setInterval(() => {
-      // 向上滚动公告
-      index < count
-        ? (wrapDom.style.marginTop = `-${(height / count) * index++}px`)
-        : (index = 0);
-    }, 20000);
-  }
-};
+    import "@/assets/css/chat.css";
+
+
+    export default {
+        mounted() {
+            let wrapDom = this.$refs.broadcastWrap;
+            // 获取wrap的高度
+            let height = wrapDom.clientHeight;
+            // 获取公告的数量
+            let count = wrapDom.children.length;
+            let index = 1;
+            setInterval(() => {
+                // 向上滚动公告
+                index < count
+                    ? (wrapDom.style.marginTop = `-${(height / count) * index++}px`)
+                    : (index = 0);
+            }, 20000);
+        }
+    };
 </script>
 
 
 <style scoped lang="stylus">
-#chat_room
-  display grid
-  width 100%
-  grid-template-columns repeat(4, 1fr)
-  grid-template-rows 36px 600px 150px
-  background-color rgba(178, 207, 135, 0.1)
-  .top
-    grid-column-start 1
-    grid-column-end 5
-    grid-row-start 1
-    grid-row-end 2
-    height 36px
-    background-color rgba(255, 175, 201, 0.3)
-    .broadcast
-      display flex
-      justify-content start
-      align-items center
-      width 60%
-      height 100%
-      margin 0 auto
-      .icon
-        font-size 16px
-        height 100%
-        line-height 36px
-        color #1ba784
-        margin-right 10px
-      .text
-        height 100%
-        overflow hidden
-        .wrap
-          transition all 0.5s linear
-          p
-            height 100%
-            line-height 36px
-            animation wordsLoop 10s linear infinite normal
-            color #57c3c2
-  .left
-    grid-column-start 1
-    grid-column-end 2
-    grid-row-start 2
-    grid-row-end 4
-    padding-right 15px
-    box-sizing border-box
-    display flex
-    flex-direction column
-    .title
-      font-weight bolder
-      font-size 20px
-      padding 10px 15px
-      border-bottom 3px solid rgba(178, 207, 135, 0.98)
-    .rooms
-      overflow auto
-      flex 1 1 auto
-      .item
-        cursor pointer
-        width 100%
+    #chat_room
         display flex
-        justify-content space-between
-        height 60px
-        border-bottom 1px solid rgba(178, 207, 135, 0.5)
-        padding 0 15px
-        border-radius 4px
-        box-sizing border-box
-        &:hover
-          background-color rgba(178, 207, 135, 0.2)
-        .avatar
-          width 60px
-          height 100%
-          flex 0 0 60px
-          margin-right 10px
-          img
-            height 50px
-            width 50px
-            margin 5px
-            border-radius 50%
-        .right
-          height 100%
-          flex 1 1 auto
-          padding 0
-          .time
-            height 30px
-            line-height 30px
-            .time-mark
-              font-weight bolder
-            .create-time
-              color #ffafc9
-          .name
-            height 30px
-            line-height 30px
-        .num
-          height 100%
-          flex 0 0 60px
-          display flex
-          justify-content center
-          align-items center
-          color #b2cf87
-          font-weight bolder
-  .content
-    grid-column-start 2
-    grid-column-end 4
-    grid-row-start 2
-    grid-row-end 3
-    margin 0 15px
-    // border 1px solid #dedede
-    display flex
-    flex-direction column
-    .chat-title
-      font-weight bold
-      height 36px
-      line-height 36px
-      flex 0 0 36px
-      padding-left 10px
-    .chat-content
-      flex 1 1 auto
-      overflow auto
-      border 1px solid rgba(178, 207, 135, 0.98)
-      border-radius 4px
-      padding 0 10px
-      .msg-item
-        display flex
-        &.msg-right
-          flex-direction row-reverse
-          .msg
-            margin-right 10px
-        .avatar
-          height 60px
-          width 60px
-          img
-            width 50px
-            height 50px
-            border-radius 50%
-            margin 5px
-        .msg
-          margin-left 10px
-          .msg-content
-            margin-top 10px
-            padding 10px
-            border-radius 8px
-            background-color #eea08c
-            max-width 300px
-            font-size 14px
-            line-height 1.5
-  .right
-    grid-column-start 4
-    grid-column-end 5
-    grid-row-start 2
-    grid-row-end 4
-    padding-bottom 20px
-    .box-card
-      height 100%
-      display flex
-      flex-direction column
-      .title
-        height 36px
-        line-height 36px
-        font-weight bold
-        border-bottom 1px solid #dedede
-        padding-left 10px
-      .card-content
+        flex-direction column
+        justify-content center
+        align-items space-between
         width 100%
-        overflow auto
-        .item
-          display flex
-          cursor pointer
-          border-bottom 1px solid #dedede
-          border-radius 4px
-          margin 0 10px
-          &:hover 
-            background-color rgba(178, 207, 135, 0.3)
-          .avatar
-            flex 0 0 50px
-            height 50px
-            width 50px
-            img
-              height 40px
-              width 40px
-              margin 5px
-              border-radius 50%
-          .name
-            flex 1 1 auto
-            line-height 50px
-            margin-left 15px
-          .mark
-            flex 0 0 50px
-            line-height 50px
-  .footer
-    grid-column-start 2
-    grid-column-end 4
-    grid-row-start 3
-    grid-row-end 4
-@keyframes wordsLoop
-  0%
-    transform translateX(100px)
-  100%
-    transform translateX(-100%)
+        background-image url("../../assets/images/chat/bg.jpg")
+
+        .top
+            height 36px
+            background-color rgba(255, 175, 201, 0.3)
+
+            .broadcast
+                display flex
+                justify-content start
+                align-items center
+                width 60%
+                height 100%
+                margin 0 auto
+
+                .icon
+                    font-size 16px
+                    height 100%
+                    line-height 36px
+                    color #1ba784
+                    margin-right 10px
+
+                .text
+                    height 100%
+                    overflow hidden
+
+                    .wrap
+                        transition all 0.5s linear
+
+                        p
+                            height 100%
+                            line-height 36px
+                            animation wordsLoop 10s linear infinite normal
+                            color #57c3c2
+
+        .centerit
+            padding 20px 0
+
+            .conversations
+                overflow auto
+
+            .chat-container
+                margin 0 auto
+
+                .msg-input
+                    outline none
+                    resize none
+
+    @keyframes wordsLoop
+        0%
+            transform translateX(100px)
+        100%
+            transform translateX(-100%)
 </style>
 
