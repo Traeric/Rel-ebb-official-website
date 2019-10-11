@@ -31,7 +31,7 @@
             <router-link to="/forum" active-class="active">论坛</router-link>
           </li>
           <li>
-            <router-link to="/aaa" active-class="active">博客</router-link>
+            <router-link to="/blog" active-class="active">博客</router-link>
           </li>
         </ul>
       </div>

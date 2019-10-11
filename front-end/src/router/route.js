@@ -6,6 +6,8 @@ import ChatRoom from "../components/ChatRoom/ChatRoom";
 import Forum from "../components/Forum/Forum";
 import ForumArticle from "../components/Forum/Article/Article";
 import ForumQuestion from "../components/Forum/Question/Question";
+import ArticleItem from "../components/Forum/Article/Item";
+import Blog from "../components/Blog/Blog";
 
 vue.use(Router);
 
@@ -35,10 +37,19 @@ export default new Router({
                     component: ForumArticle,
                 },
                 {
+                    path: "article/item/:id",
+                    component: ArticleItem,
+                },
+                {
                     path: "question",
                     component: ForumQuestion,
                 },
             ],
+        },
+        {
+            path: "/blog",
+            component: Blog,
+            name: "blog",
         },
     ],
 });

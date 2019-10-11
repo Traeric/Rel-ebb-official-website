@@ -21,87 +21,41 @@
         </div>
         <div class="select-list">
             <div class="category">
-                <el-select placeholder="请选择分类" v-model="category">
-                    <el-option label="区域一" value="shanghai"></el-option>
-                    <el-option label="区域二" value="beijing"></el-option>
+                <el-select placeholder="请选择分类" v-model="category" @change="getCategory">
+                    <el-option label="区域一" value="0"></el-option>
+                    <el-option label="区域二" value="1"></el-option>
                 </el-select>
             </div>
-            <div class="new hov active">最新发布</div>
-            <div class="hot hov">最热</div>
+            <div class="new hov active" @click="newList" ref="new">最新发布</div>
+            <div class="hot hov" ref="hot" @click="hotList">最热</div>
         </div>
         <div class="display-area">
             <div class="title-top">
                 <el-tag type="warning">分类一</el-tag>
                 <el-tag type="danger">最新</el-tag>
             </div>
-            <div class="item">
+            <div class="item" v-for="(item, index) in articleList" :key="index">
                 <div class="avatar">
-                    <img src="@/assets/images/chat/1.png" alt="NO IMG">
+                    <img :src="item.avatar" alt="NO IMG">
                 </div>
                 <div class="info">
-                    <div class="title">rel-ebb真是好用啊</div>
-                    <div class="user-info">
-                        <div class="left">
-                            <div class="user">李可乐</div>
-                            <div class="time">
-                                <el-tag type="success">2019-2-8</el-tag>
-                            </div>
-                            <div class="thumb-up" title="已阅">
-                                <i class="el-icon-view"></i>
-                                15
-                            </div>
-                        </div>
-                        <div class="right" title="评论">
-                            <i class="el-icon-edit"></i>
-                            15
-                        </div>
+                    <div class="title">
+                        <router-link :to="'article/item/' + item.id">{{item.title}}</router-link>
                     </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="avatar">
-                    <img src="@/assets/images/chat/1.png" alt="NO IMG">
-                </div>
-                <div class="info">
-                    <div class="title">rel-ebb真是好用啊</div>
                     <div class="user-info">
                         <div class="left">
-                            <div class="user">李可乐</div>
+                            <div class="user" v-text="item.user"></div>
                             <div class="time">
-                                <el-tag type="success">2019-2-8</el-tag>
+                                <el-tag type="success" v-text="item.time"></el-tag>
                             </div>
                             <div class="thumb-up" title="已阅">
                                 <i class="el-icon-view"></i>
-                                15
+                                {{item.read}}
                             </div>
                         </div>
                         <div class="right" title="评论">
                             <i class="el-icon-edit"></i>
-                            15
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="avatar">
-                    <img src="@/assets/images/chat/1.png" alt="NO IMG">
-                </div>
-                <div class="info">
-                    <div class="title">rel-ebb真是好用啊</div>
-                    <div class="user-info">
-                        <div class="left">
-                            <div class="user">李可乐</div>
-                            <div class="time">
-                                <el-tag type="success">2019-2-8</el-tag>
-                            </div>
-                            <div class="thumb-up" title="已阅">
-                                <i class="el-icon-view"></i>
-                                15
-                            </div>
-                        </div>
-                        <div class="right" title="评论">
-                            <i class="el-icon-edit"></i>
-                            15
+                            {{item.comment}}
                         </div>
                     </div>
                 </div>
@@ -114,8 +68,157 @@
     export default {
         data() {
             return {
-                category: "shanghai",
+                category: "0",
+                articleList: [
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "@/assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "@/assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "@/assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                ],
             };
+        },
+        methods: {
+            getCategory() {
+                this.articleList = [
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "@/assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "@/assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                ];
+            },
+            // 最新发布
+            newList() {
+                // 最新发布样式
+                this.$refs.new.setAttribute("class", "new hov active");
+                this.$refs.hot.setAttribute("class", "hot hov");
+                this.articleList = [
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "@/assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                ];
+            },
+            // 最热文章
+            hotList() {
+                this.$refs.new.setAttribute("class", "new hov");
+                this.$refs.hot.setAttribute("class", "hot hov active");
+                this.articleList = [
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                    {
+                        "id": 1,
+                        "avatar": "../assets/images/chat/1.png",
+                        "title": "rel-ebb真是好用啊",
+                        "user": "李可乐",
+                        "time": "2019-2-8",
+                        "read": 15,
+                        "comment": 20,
+                    },
+                ];
+            },
         },
     }
 </script>
@@ -175,6 +278,9 @@
                         height 30px
                         line-height 30px
                         font-weight bold
+                        a
+                            color #000
+                            text-decoration none
                     .user-info
                         display flex
                         justify-content space-between
